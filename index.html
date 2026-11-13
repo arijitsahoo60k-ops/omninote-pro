@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniNote Pro v4 – Free note-taking app for Redmi Pad Pro 5G</title>
+  <meta name="description" content="OmniNote Pro v4 is a free, pen-first note-taking app made for the Redmi Pad Pro 5G and Redmi Smart Pen 1s.">
+  <meta name="theme-color" content="#14122b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="OmniNote Pro home">
+      <img src="assets/favicon.svg" alt="" width="28" height="28">
+      <span>OmniNote Pro</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav id="navLinks" class="nav-links">
+      <a href="#pen">Pen-first</a>
+      <a href="#devices">Devices</a>
+      <a href="#download" class="nav-cta">Download</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="pill">Version <span data-version>4</span> · Free · Early release</p>
+        <h1>Write on your Redmi Pad Pro like it's paper.</h1>
+        <p class="lead">OmniNote Pro v4 is a free note-taking app made for the Redmi Pad Pro 5G and the Redmi Smart Pen 1s. Pick up the pen and write.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#download" data-download>Download APK</a>
+          <a class="btn btn-ghost" href="#devices">Check your tablet</a>
+        </div>
+        <p class="hint">Try the pad on the right – use a mouse, finger or pen.</p>
+      </div>
+
+      <div class="tablet" aria-label="Interactive writing demo">
+        <div class="tablet-bezel">
+          <div class="tablet-screen">
+            <div class="toolbar" role="toolbar" aria-label="Pen tools">
+              <button class="tool is-active" data-tool="ink" aria-label="Ink pen" title="Ink pen"><i style="--c:#2b2566"></i></button>
+              <button class="tool" data-tool="violet" aria-label="Violet pen" title="Violet pen"><i style="--c:#7c5cff"></i></button>
+              <button class="tool" data-tool="marker" aria-label="Highlighter" title="Highlighter"><i style="--c:#ffd84d"></i></button>
+              <span class="toolbar-gap"></span>
+              <button class="tool-text" id="undoBtn" type="button">Undo</button>
+              <button class="tool-text" id="clearBtn" type="button">Clear</button>
+            </div>
+            <div class="paper">
+              <canvas id="pad" aria-label="Drawing area"></canvas>
+              <p class="paper-hint" id="padHint">Write something here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split" id="pen">
+      <div class="split-head">
+        <h2>Made for one tablet and one pen.</h2>
+        <p>OmniNote Pro was built and tested on the Redmi Pad Pro 5G with the Redmi Smart Pen 1s. That focus is why it feels the way it does.</p>
+      </div>
+      <ul class="rows">
+        <li>
+          <h3>Pen-first writing</h3>
+          <p>Designed around the Redmi Smart Pen 1s, so writing and sketching feel direct.</p>
+        </li>
+        <li>
+          <h3>Built for a big screen</h3>
+          <p>The layout is made for the Redmi Pad Pro 5G's tablet display, not stretched from a phone app.</p>
+        </li>
+        <li>
+          <h3>Free to download</h3>
+          <p>Install the APK and start taking notes. No payment needed.</p>
+        </li>
+        <li>
+          <h3>Updated over time</h3>
+          <p>This is a new release. Newer APK versions will be uploaded here as bugs get fixed.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="devices">
+      <div class="section-head">
+        <h2>Will it work on your tablet?</h2>
+        <p>Only the Redmi Pad Pro 5G is confirmed. Other Android tablets might work, but they haven't been tried yet.</p>
+      </div>
+
+      <div class="checker">
+        <div>
+          <p class="checker-title">Your device</p>
+          <p class="checker-result" id="checkResult">Press the button to check this device.</p>
+        </div>
+        <button class="btn btn-primary" id="checkBtn" type="button">Check this device</button>
+      </div>
+
+      <div class="table" role="table" aria-label="Device compatibility">
+        <div class="tr th" role="row"><span role="columnheader">Device</span><span role="columnheader">Status</span></div>
+        <div class="tr" role="row"><span role="cell">Redmi Pad Pro 5G</span><span role="cell"><b class="chip ok">Supported</b></span></div>
+        <div class="tr" role="row"><span role="cell">Redmi Smart Pen 1s</span><span role="cell"><b class="chip ok">Supported</b></span></div>
+        <div class="tr" role="row"><span role="cell">Other Android tablets</span><span role="cell"><b class="chip test">Please test</b></span></div>
+        <div class="tr" role="row"><span role="cell">Other styluses</span><span role="cell"><b class="chip test">Please test</b></span></div>
+        <div class="tr" role="row"><span role="cell">Phones</span><span role="cell"><b class="chip no">Not designed for</b></span></div>
+      </div>
+      <p class="note">Tried it on another tablet? <a href="#" data-issues>Tell us what worked and what didn't</a> – include your tablet model and Android version.</p>
+    </section>
+
+    <section class="section download" id="download">
+      <div class="download-card">
+        <div>
+          <p class="pill pill-dark">Latest · v<span data-version>4</span></p>
+          <h2>Download OmniNote Pro v<span data-version>4</span></h2>
+          <p class="lead">Free APK for Android tablets. Best on the Redmi Pad Pro 5G.</p>
+          <a class="btn btn-primary btn-lg" href="#" data-download>Download APK</a>
+          <p class="small" id="versionLine"></p>
+        </div>
+        <ol class="steps">
+          <li><b>Download</b> the APK to your tablet.</li>
+          <li><b>Open</b> the file from your notifications or Files app.</li>
+          <li><b>Allow</b> installs from this source if Android asks.</li>
+          <li><b>Launch</b> OmniNote Pro and start writing.</li>
+        </ol>
+      </div>
+      <p class="note center">This is an early version, so you may hit bugs. <a href="#" data-issues>Report a bug</a> and it will be fixed in the next release.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><b>OmniNote Pro v<span data-version>4</span></b> – an independent app. Not affiliated with or endorsed by Xiaomi or Redmi. Redmi Pad Pro 5G and Redmi Smart Pen 1s are trademarks of their owners.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

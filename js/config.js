@@ -2,10 +2,10 @@
 window.OMNINOTE = {
   // Version number shown across the whole site, e.g. "4", "4.1" or "5"
   version: "4",
-  // Direct link to your APK. Easiest: create a GitHub Release, attach the APK,
-  // then paste the asset link here, e.g.
-  // "https://github.com/YOUR-USERNAME/YOUR-REPO/releases/latest/download/OmniNotePro-v4.apk"
-  apkUrl: "",
-  // Where people report bugs, e.g. "https://github.com/YOUR-USERNAME/YOUR-REPO/issues"
-  issuesUrl: ""
+
+  // Direct link to your APK file
+  apkUrl: "https://github.com/arijitsahoo20k-hash/omninote-pro/releases/download/v4/omninote-pro.v4.apk",
+
+  // Where people report bugs
+  issuesUrl: "https://github.com/arijitsahoo20k-hash/omninote-pro/issues"
 };
